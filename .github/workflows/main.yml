@@ -27,7 +27,10 @@ jobs:
         with:
           node-version: 12
       - name: Install Surge
-        run: npm install --global surge    
+        run: npm install --global surge   
+        
+      - name: Building react file
+        run: npm run build 
       
       - name: Deploy using Surge
         run: surge ./build http://naseer005.surge.sh/ --token ${{secrets.REACT_SEC}}
