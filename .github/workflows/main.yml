@@ -27,7 +27,10 @@ jobs:
         with:
           node-version: 12
       - name: Install Surge
-        run: npm install --global surge   
+        run: npm install --global surge  
+      
+      - name: Installing Node Modules
+        run: npm install
         
       - name: Building react file
         run: npm run build 
